@@ -8,12 +8,11 @@ output:
     css: [bips.css, default]
     lib_dir: libs
     nature:
-      titleSlideClass: [bottom, left]
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
       slideNumberFormat: "%current%"
-      ratio: "16:9"
+      # ratio: "16:9"
 ---
 
 layout: true
