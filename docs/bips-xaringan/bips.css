@@ -84,8 +84,8 @@ h1, h2, h3 {
   background-color: var(--background-color);
   font-size: 1rem;
   background-image: url(bips-logo.png);
-  background-size: 10%;
-  background-position: right 5% top 5%;
+  background-size: 120px; /* 10%; */
+  background-position: right 16px top 16px;
   padding: 16px 64px 16px 64px;
   width: 100%;
   height: 100%;
@@ -288,13 +288,19 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: var(--bipsgreen);
 }
 
-/* Additional BIPS CSS tweaks */
+/* ---------------------------- */
+/*
+/* - Additional BIPS CSS tweaks */
+/*
+/* ---------------------------- */
 
 .remark-slide-number {
-  top: 18%;
-  right: 5%;
-  width: 10%;
-  text-align-last: center;
+  top: 138px;
+  bottom: 5px;
+  /*bottom: 550px;*/
+  right: 16px;
+  width: 120px;
+  text-align: center;
 }
 
 .inverse .remark-slide-number {
