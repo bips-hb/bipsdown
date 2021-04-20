@@ -12,7 +12,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       slideNumberFormat: "%current%"
-      # ratio: "16:9"
+      ratio: "16:9"
 ---
 
 layout: true
