@@ -19,7 +19,7 @@ Please not that while the repository is private, you need to have R properly con
 
 ### `{xaringan}` Slides (HTML)
 
-To use the `{xaringan}` presentation template, create A new RMarkdown file from the RStudio dropdown menu and select "From Template", where you should find the BIPS templates.
+To use the [`{xaringan}`](https://slides.yihui.org/xaringan/) presentation template, create A new RMarkdown file from the RStudio dropdown menu and select "From Template", where you should find the BIPS templates.
 
 Your `.Rmd` file should start with something like this:
 
@@ -47,6 +47,7 @@ This is generally considered to be a nifty thing.
 
 #### Tips & Tricks
 
+- The [`{xaringan}`](https://slides.yihui.org/xaringan/) reference slides provide most of the functionality you're likely to need to get started.
 - Sharing your slides: https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/
 
 ## Credits & License
