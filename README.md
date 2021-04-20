@@ -3,11 +3,11 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bipsdown is to provide easy to use RMarkdown templates consistent with the BIPS house styles.
+The goal of `{bipsdown}` is to provide easy to use RMarkdown templates consistent with the BIPS house styles.
 
 ## Installation
 
-You can install the released version of `{bipsdown}` from with:
+You can install the current version of `{bipsdown}` from GitHub with:
 
 ``` r
 remotes::install_github("bips-hb/bipsdown")
@@ -18,6 +18,8 @@ Please not that while the repository is private, you need to have R properly con
 ## Example
 
 ### `{xaringan}` Slides (HTML)
+
+You can find a demo presentation [here](https://bips-hb.github.io/bipsdown/bips-xaringan/bips-xaringan.html).
 
 To use the [`{xaringan}`](https://slides.yihui.org/xaringan/) presentation template, create A new RMarkdown file from the RStudio dropdown menu and select "From Template", where you should find the BIPS templates.
 
@@ -49,6 +51,10 @@ This is generally considered to be a nifty thing.
 
 - The [`{xaringan}`](https://slides.yihui.org/xaringan/) reference slides provide most of the functionality you're likely to need to get started.
 - Sharing your slides: https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/
+
+### Beamer Slides (PDF)
+
+TBI
 
 ## Credits & License
 
