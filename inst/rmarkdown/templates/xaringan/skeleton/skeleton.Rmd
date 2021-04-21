@@ -31,7 +31,7 @@ knitr::opts_chunk$set(
 
 # xaringanExtra features, see https://pkg.garrickadenbuie.com/xaringanExtra/
 xaringanExtra::use_xaringan_extra(
-  c("tile_view", "panelset", "clipboard", "fit_screen")
+  c("tile_view", "panelset", "clipboard", "fit_screen", "share_again")
 )
 ```
 

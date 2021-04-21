@@ -1,4 +1,6 @@
-# bipsdown: RMarkdown themes for BIPS
+---
+title: "bipsdown: RMarkdown themes for BIPS"
+---
 
 <!-- badges: start -->
 <!-- badges: end -->
