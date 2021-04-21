@@ -294,19 +294,30 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 /*
 /* ---------------------------- */
 
+/* 
+Slide number positioning on the top right under the BIPS logo is hard.
+Special care required for different aspect ratios, e.g. relative 
+placement with % is problematic
+*/
 .remark-slide-number {
   top: 138px;
   bottom: 5px;
-  /*bottom: 550px;*/
   right: 16px;
   width: 120px;
   text-align: center;
 }
 
+/*
+Don't show slide number on inverted slides used for titles
+*/
 .inverse .remark-slide-number {
   visibility: hidden;
 }
 
+/*
+Reference theme has a gray line under the titles, which is
+not that easy tu emulate with borders, but I tried
+*/
 .remark-slide-content h1 {
   margin-left: 11%;
   margin-right: 11%;
@@ -315,3 +326,9 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   border-bottom-style: solid;
   border-bottom-color: #E2E2E2;
 }
+
+/* ---------------------------- */
+/*
+/* - Make your tweaks below  -- */
+/*
+/* ---------------------------- */

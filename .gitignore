@@ -7,3 +7,4 @@
 inst/rmarkdown/templates/xaringan/skeleton/skeleton_files
 inst/rmarkdown/templates/xaringan/skeleton/libs
 inst/rmarkdown/templates/xaringan/skeleton/*.html
+fiddle.R
