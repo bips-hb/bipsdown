@@ -1,8 +1,10 @@
 ---
 title: "A {xaringan} template for BIPS presentations"
-subtitle: "A scientific thing"
-author: "Lukas Burk"
-date: "`r Sys.Date()`"
+subtitle: "A scientific thing" # e.g. the occasion
+author: "Lukas Burk" # For the title slide
+contactauthor: "Lukas Burk" # For the last slide
+contactemail: "burk@leibniz-bips.de" # For the last slide
+date: "`r Sys.Date()`" # Automatically evaluates to today
 output:
   xaringan::moon_reader:
     css: [bips.css, default]
@@ -11,7 +13,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      slideNumberFormat: "%current%"
+      slideNumberFormat: "%current%" # Only show current slide number
       ratio: "16:9" # Use "4:3" for old projectors
 ---
 
@@ -21,13 +23,30 @@ output:
 
 # knitr chunk options for all chunks
 knitr::opts_chunk$set(
+  warning = FALSE,      # Don't show warnings from R code
   dev = "ragg_png",     # Higher quality png graphics device
-  fig.align = "center"  # Centered plots
+  fig.align = "center", # Centered plots
+  fig.retina = 2        # Higher image quality for high resolution screens
 )
 
 # xaringanExtra features, see https://pkg.garrickadenbuie.com/xaringanExtra/
-xaringanExtra::use_xaringan_extra(c("tile_view", "panelset", "clipboard"))
+xaringanExtra::use_xaringan_extra(
+  c("tile_view", "panelset", "clipboard", "fit_screen")
+)
 ```
+
+class: middle
+
+# {xaringan} with BIPS styles
+
+This is a BIPS-theme for the [`{xaringan}`](https://slides.yihui.org/xaringan/) RMarkdown presentation format developed by Yihui Xie.  
+
+It serves as an alternative to $\LaTeX$/Beamer PDF slides and allows interactive/animated content and easy web-based sharing and embedding.
+
+You can use math mostly as you would with $\LaTeX$, but with some caveats.
+
+The remaining slides are taking from the official [`{xaringan}`](https://slides.yihui.org/xaringan/) demonstration.
+
 
 ---
 class: center, middle
@@ -357,9 +376,27 @@ ggplot(mtcars) +
 
 ---
 class: center, middle
+background-image: none
 
-# Thanks!
+# Thank you for your attention
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+### [www.leibniz-bips.de/en](https://www.leibniz-bips.de/en)
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+.pull-left[
+.right[
+#### Contact
+
+.bipsblue[`r rmarkdown::metadata$contactauthor`]  
+Leibniz Institute for Prevention Research and Epidemiology - BIPS GmbH  
+Achterstraße 30  
+D-28359  
+.bipsblue[`r rmarkdown::metadata$contactemail`]
+]
+]
+.pull-right[
+
+```{r, echo = FALSE, out.width = "50%"}
+knitr::include_graphics("bips-logo.png")
+```
+
+]

@@ -7,8 +7,13 @@ Authors@R:
            role = c("aut", "cre"),
            email = "burk@leibniz-bips.de",
            comment = c(ORCID = "0000-0001-7528-3795"))
-Description: Provides RMarkdown templates for presentations with the BIPS style
+Description: Provides RMarkdown templates for presentations with the BIPS
+    style
 License: MIT + file LICENSE
+Imports: 
+    rmarkdown,
+    xaringan,
+    xaringanExtra
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
