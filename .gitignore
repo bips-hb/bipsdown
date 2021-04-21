@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 .Rprofile
+README.html
 
 inst/rmarkdown/templates/xaringan/skeleton/skeleton_files
 inst/rmarkdown/templates/xaringan/skeleton/libs
