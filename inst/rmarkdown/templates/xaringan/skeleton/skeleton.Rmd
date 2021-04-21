@@ -12,13 +12,22 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       slideNumberFormat: "%current%"
-      ratio: "16:9"
+      ratio: "16:9" # Use "4:3" for old projectors
 ---
 
-layout: true
-    
-<div class="logo"></div> 
+```{r setup, include=FALSE}
+# This chunk is not visible in the presentation
+# Use it to set up misc. options for your code/output
 
+# knitr chunk options for all chunks
+knitr::opts_chunk$set(
+  dev = "ragg_png",     # Higher quality png graphics device
+  fig.align = "center"  # Centered plots
+)
+
+# xaringanExtra features, see https://pkg.garrickadenbuie.com/xaringanExtra/
+xaringanExtra::use_xaringan_extra(c("tile_view", "panelset", "clipboard"))
+```
 
 ---
 class: center, middle
@@ -210,7 +219,7 @@ See the next page for two HTML widgets.
 
 ```{r out.width='100%', fig.height=6, eval=require('leaflet')}
 library(leaflet)
-leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 17)
+leaflet() %>% addTiles() %>% setView(8.8585, 53.10014, zoom = 18)
 ```
 
 ---
