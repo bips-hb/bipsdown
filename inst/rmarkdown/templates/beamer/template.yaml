@@ -1,0 +1,4 @@
+name: BIPS beamer Presentation template
+description: >
+   Standard LaTeX/beamer BIPS template for PDF presentations
+create_dir: FALSE

@@ -1,0 +1,48 @@
+---
+title: "A BIPS Theme for Beamer Slides"
+subtitle: "The power of \\LaTeX\\ combined with RMarkdown"
+author: 
+  - Louis Dijkstra
+  - Lukas Burk
+contactauthor: Lukas Burk
+date: "`r Sys.Date()`"
+occasion: "Project Meeting"
+email: you@leibniz-bips.de
+themeoptions: 
+  - fira
+  # - german
+thankstext: Thank you for your attention
+output: 
+  beamer_presentation: 
+    incremental: yes
+    latex_engine: "xelatex"
+    template: template.tex
+    dev: cairo_pdf
+    citation_package: biblatex
+    keep_tex: true
+# bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, 
+  message = FALSE,
+  fig.height = 4.2,
+  fig.width = 7,
+  out.width = "95%"
+)
+```
+
+## Introduction
+
+## Background
+
+## Methods
+
+## Results
+
+## Limiations
+
+## Outlook
+
+## Conclusion
