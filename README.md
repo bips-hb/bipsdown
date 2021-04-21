@@ -1,4 +1,4 @@
-# bipsdown
+# bipsdown: RMarkdown themes for BIPS
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -49,11 +49,25 @@ This is generally considered to be a nifty thing.
 
 - The [`{xaringan}`](https://slides.yihui.org/xaringan/) reference slides provide most of the functionality you're likely to need to get started.
 - Sharing your slides: https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/
+- [`{xaringanExtra}`](https://pkg.garrickadenbuie.com/xaringanExtra/) provides many useful add-ons.
 
 ## Beamer Slides (PDF)
 
-TBI
+You can find a demo presentation [here](https://bips-hb.github.io/bipsdown/bips-beamer/bips-beamer.pdf).
+
 
 ## Credits & License
 
-The `{xaringan}` theme was mostly created with the help of the wonderful [{xaringanthemer}](https://pkg.garrickadenbuie.com/xaringanthemer/) package.
+- The `{xaringan}` theme was mostly created with the help of the wonderful [{xaringanthemer}](https://pkg.garrickadenbuie.com/xaringanthemer/) package.
+
+- The `beamer` theme was [implemented by Louis Dijkstra](https://github.com/bips-hb/bips-beamer) and further adapted with a pandoc template to be used with RMarkdown.
+
+To quote Louis:
+
+> A special thanks to Márton Marczell. I used his implementation of various styles 
+as a guide. You can find the code here: https://bitbucket.org/marczellm/beamerports.
+> Since Marczell's work is published under the Creative Commons License (version: [CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0)), the BIPS beamer style is too.
+
+```
+	This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+```
