@@ -20,7 +20,7 @@ properly configured to access your GitHub account.
 ## `{xaringan}` Slides (HTML)
 
 You can find a demo presentation
-[here](https://bips-hb.github.io/bipsdown/bips-xaringan/bips-xaringan.html).
+[here](https://bips-hb.github.io/bipsdown/bips-xaringan/).
 
 To use the [`{xaringan}`](https://slides.yihui.org/xaringan/)
 presentation template, create A new RMarkdown file from the RStudio
