@@ -17,7 +17,14 @@ Please not that while the repository is private, you need to have R properly con
 
 ## `{xaringan}` Slides (HTML)
 
-You can find a demo presentation [here](https://bips-hb.github.io/bipsdown/bips-xaringan/bips-xaringan.html).
+You can find a demo presentation [here](https://bips-hb.github.io/bipsdown/bips-xaringan/bips-xaringan.html), and also here:
+
+```{r, echo = FALSE}
+xaringanExtra::embed_xaringan(
+  url = "https://bips-hb.github.io/bipsdown/bips-xaringan/",
+  ratio = "16:9"
+)
+```
 
 To use the [`{xaringan}`](https://slides.yihui.org/xaringan/) presentation template, create A new RMarkdown file from the RStudio dropdown menu and select "From Template", where you should find the BIPS templates.
 
