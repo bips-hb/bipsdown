@@ -1,9 +1,20 @@
 ---
-title: "bipsdown: RMarkdown themes for BIPS"
+output: github_document
+always_allow_html: true
 ---
 
-<!-- badges: start -->
-<!-- badges: end -->
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "80%"
+)
+```
+
+# `{bipsdown}`: BIPS themes for RMarkdown presentations
 
 The goal of `{bipsdown}` is to provide easy to use RMarkdown templates consistent with the BIPS house styles.
 
@@ -19,14 +30,7 @@ Please not that while the repository is private, you need to have R properly con
 
 ## `{xaringan}` Slides (HTML)
 
-You can find a demo presentation [here](https://bips-hb.github.io/bipsdown/bips-xaringan/bips-xaringan.html), and also here:
-
-```{r, echo = FALSE}
-xaringanExtra::embed_xaringan(
-  url = "https://bips-hb.github.io/bipsdown/bips-xaringan/",
-  ratio = "16:9"
-)
-```
+You can find a demo presentation [here](https://bips-hb.github.io/bipsdown/bips-xaringan/bips-xaringan.html).
 
 To use the [`{xaringan}`](https://slides.yihui.org/xaringan/) presentation template, create A new RMarkdown file from the RStudio dropdown menu and select "From Template", where you should find the BIPS templates.
 
