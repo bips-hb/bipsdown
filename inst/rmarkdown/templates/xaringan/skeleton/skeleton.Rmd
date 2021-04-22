@@ -375,24 +375,21 @@ ggplot(mtcars) +
 ```
 
 ---
-class: center, middle
+class: center, middle, thanks
 background-image: none
 
 # Thank you for your attention
 
 ### [www.leibniz-bips.de/en](https://www.leibniz-bips.de/en)
 
-.pull-left[
-.right[
-#### Contact
-
+.pull-left[.right[
+#### Contact  
 .bipsblue[`r rmarkdown::metadata$contactauthor`]  
 Leibniz Institute for Prevention Research and Epidemiology - BIPS GmbH  
 Achterstraße 30  
 D-28359  
 .bipsblue[`r rmarkdown::metadata$contactemail`]
-]
-]
+]]
 .pull-right[
 
 ```{r, echo = FALSE, out.width = "50%"}

@@ -9,9 +9,8 @@ inst/rmarkdown/templates/xaringan/skeleton/skeleton_files
 inst/rmarkdown/templates/xaringan/skeleton/libs
 inst/rmarkdown/templates/xaringan/skeleton/*.html
 
-inst/rmarkdown/templates/xaringan/skeleton/skeleton_files
-inst/rmarkdown/templates/xaringan/skeleton/*.pdf
-inst/rmarkdown/templates/xaringan/skeleton/*.html
+inst/rmarkdown/templates/beamer/skeleton/skeleton.tex
+inst/rmarkdown/templates/beamer/skeleton/*.pdf
 
 fiddle.R
 

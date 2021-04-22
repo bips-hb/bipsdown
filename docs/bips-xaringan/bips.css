@@ -294,9 +294,9 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 /*
 /* ---------------------------- */
 
-/* 
+/*
 Slide number positioning on the top right under the BIPS logo is hard.
-Special care required for different aspect ratios, e.g. relative 
+Special care required for different aspect ratios, e.g. relative
 placement with % is problematic
 */
 .remark-slide-number {
@@ -308,9 +308,10 @@ placement with % is problematic
 }
 
 /*
-Don't show slide number on inverted slides used for titles
+Don't show slide number on inverted slides used for titles and thanks frame
 */
-.inverse .remark-slide-number {
+.inverse .remark-slide-number,
+.thanks .remark-slide-number {
   visibility: hidden;
 }
 

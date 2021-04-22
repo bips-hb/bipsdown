@@ -130,7 +130,7 @@
  		\useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
  			\node[anchor=north east,yshift=-.5cm,xshift=-.5cm]%
         			at (current page.north east)
-        			{\includegraphics[scale=0.3]{bips-logo.png}};
+        			{\includegraphics[width=0.15\textwidth]{bips-logo.png}};
 			\ifnum\thepage>1\relax %%% If not the title page
 				\node[anchor=north east,yshift=-2cm,xshift=-1cm]%
         			at (current page.north east)
@@ -184,7 +184,7 @@
 					\small D-28359 Bremen\\[5pt]
 					\small \textcolor{BIPSBlue}{\bips@email}
 			};
-			\node at (10, 2) {\includegraphics[scale=0.7]{bips-logo.png}};
+			\node at (10, 2) {\includegraphics[width=0.3\textwidth]{bips-logo.png}};
 		\end{tikzpicture}
 	}
 	\begin{frame}[c]
