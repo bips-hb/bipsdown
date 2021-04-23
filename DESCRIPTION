@@ -1,15 +1,19 @@
 Package: bipsdown
 Title: BIPS Themes for Presentations
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
-    person(given = "Lukas",
-           family = "Burk",
-           role = c("aut", "cre"),
-           email = "burk@leibniz-bips.de",
-           comment = c(ORCID = "0000-0001-7528-3795"))
+    c(person(given = "Lukas",
+             family = "Burk",
+             role = c("aut", "cre"),
+             email = "burk@leibniz-bips.de",
+             comment = c(ORCID = "0000-0001-7528-3795")),
+      person(given = "Louis",
+             family = "Dijkstra",
+             role = "aut",
+             email = "dijkstra@leibniz-bips.de"))
 Description: Provides RMarkdown templates for presentations with the BIPS
     style
-License: MIT + file LICENSE
+License: CC BY 4.0
 Imports: 
     rmarkdown,
     xaringan,
