@@ -14,7 +14,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       slideNumberFormat: "%current%" # Only show current slide number
-      ratio: "16:9" # Use "4:3" for old projectors
+      ratio: "16:9" # Use "4:3" for old projectors etc.
 ---
 
 ```{r setup, include=FALSE}
@@ -23,21 +23,22 @@ output:
 
 # knitr chunk options for all chunks
 knitr::opts_chunk$set(
+  echo = TRUE,          # Set FALSE to hide R code
   warning = FALSE,      # Don't show warnings from R code
   dev = "ragg_png",     # Higher quality png graphics device
-  fig.align = "center", # Centered plots
+  fig.align = "center", # Centered plots (recommended)
   fig.retina = 2        # Higher image quality for high resolution screens
 )
 
 # xaringanExtra features, see https://pkg.garrickadenbuie.com/xaringanExtra/
 xaringanExtra::use_xaringan_extra(
-  c("tile_view", "panelset", "clipboard", "fit_screen", "share_again")
+  c("tile_view", "panelset", "clipboard", "fit_screen")
 )
 ```
 
 class: middle
 
-# {xaringan} with BIPS styles
+# {xaringan} (/ʃæ.'riŋ.ɡæn/) with BIPS styles
 
 This is a BIPS-theme for the [`{xaringan}`](https://slides.yihui.org/xaringan/) RMarkdown presentation format developed by Yihui Xie.  
 
@@ -45,8 +46,19 @@ It serves as an alternative to $\LaTeX$/Beamer PDF slides and allows interactive
 
 You can use math mostly as you would with $\LaTeX$, but with some caveats.
 
-The remaining slides are taking from the official [`{xaringan}`](https://slides.yihui.org/xaringan/) demonstration.
 
+???
+
+These are slide comments visible in the .bipsorange[presenter view].  
+You can use `markdown` here as usual ¯\\\_(ツ)_/¯ 
+
+
+---
+class: center, middle
+
+# That's the gist!
+
+The remaining slides are mostly taken from the official [`{xaringan}`](https://slides.yihui.org/xaringan/) demonstration by Yihui Xie.
 
 ---
 class: center, middle

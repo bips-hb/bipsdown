@@ -35,6 +35,8 @@ knitr::opts_chunk$set(
 
 ## Introduction
 
+- This is a very interesting talk
+
 ## Background
 
 ## Methods
@@ -46,3 +48,6 @@ knitr::opts_chunk$set(
 ## Outlook
 
 ## Conclusion
+
+- We did science
+- It was quite interesting
