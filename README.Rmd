@@ -58,11 +58,13 @@ output:
 You can knit & preview your slides as you usually would with RMarkdown, but `{xaringan}` provides an RStudio Addin called "Infinite Moon Reader" that renders your slides, displays them in the Viewer Pane, and automatically updates them as you edit your slides.  
 This is generally considered to be a nifty thing.
 
-### Tips & Tricks
+### Further Reading
 
-- The [`{xaringan}`](https://slides.yihui.org/xaringan/) reference slides provide most of the functionality you're likely to need to get started.
-- Sharing your slides: https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/
-- [`{xaringanExtra}`](https://pkg.garrickadenbuie.com/xaringanExtra/) provides many useful add-ons.
+- [{xaringan} in the RMarkdown book](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+- [{xaringan} documentation presentation](http://slides.yihui.name/xaringan/)
+- [Bonus features in {xaringanExtra} by Garrick Aden-Buie ({xaringan}-wizard)](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
+- [Garrick's short intro to {xaringan}](https://slides.garrickadenbuie.com/sliding-in-style/)
+
 
 ## Beamer Slides (PDF)
 
@@ -72,7 +74,6 @@ You can find a demo presentation [here](https://bips-hb.github.io/bipsdown/bips-
 ## Credits & License
 
 - The `{xaringan}` theme was mostly created with the help of the wonderful [{xaringanthemer}](https://pkg.garrickadenbuie.com/xaringanthemer/) package.
-
 - The `beamer` theme was [implemented by Louis Dijkstra](https://github.com/bips-hb/bips-beamer) and further adapted with a pandoc template to be used with RMarkdown.
 
 To quote Louis:

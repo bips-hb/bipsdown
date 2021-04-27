@@ -34,7 +34,7 @@ Your `.Rmd` will start with something like this:
 title: "A {xaringan} template for BIPS presentations"
 subtitle: "A scientific thing"
 author: "Lukas Burk"
-date: "2021-04-21"
+date: "2021-04-27"
 output:
   xaringan::moon_reader:
     css: [bips.css, default]
@@ -54,15 +54,16 @@ that renders your slides, displays them in the Viewer Pane, and
 automatically updates them as you edit your slides.  
 This is generally considered to be a nifty thing.
 
-### Tips & Tricks
+### Further Reading
 
--   The [`{xaringan}`](https://slides.yihui.org/xaringan/) reference
-    slides provide most of the functionality you’re likely to need to
-    get started.
--   Sharing your slides:
-    <https://www.garrickadenbuie.com/blog/sharing-xaringan-slides/>
--   [`{xaringanExtra}`](https://pkg.garrickadenbuie.com/xaringanExtra/)
-    provides many useful add-ons.
+-   [{xaringan} in the RMarkdown
+    book](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+-   [{xaringan} documentation
+    presentation](http://slides.yihui.name/xaringan/)
+-   [Bonus features in {xaringanExtra} by Garrick Aden-Buie
+    ({xaringan}-wizard)](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
+-   [Garrick’s short intro to
+    {xaringan}](https://slides.garrickadenbuie.com/sliding-in-style/)
 
 ## Beamer Slides (PDF)
 
@@ -75,7 +76,6 @@ You can find a demo presentation
     wonderful
     [{xaringanthemer}](https://pkg.garrickadenbuie.com/xaringanthemer/)
     package.
-
 -   The `beamer` theme was [implemented by Louis
     Dijkstra](https://github.com/bips-hb/bips-beamer) and further
     adapted with a pandoc template to be used with RMarkdown.
