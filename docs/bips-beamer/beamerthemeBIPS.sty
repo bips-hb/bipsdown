@@ -48,8 +48,14 @@
 \definecolor{BIPSOrange}{RGB}{250, 133, 55}
 \definecolor{BIPSGreen}{RGB}{49, 210, 57}
 
+%%% Create short commands for the different colors
+\newcommand{\blue}[1]{\textcolor{BIPSBlue}{#1}}
+\newcommand{\orange}[1]{\textcolor{BIPSOrange}{#1}}
+\newcommand{\green}[1]{\textcolor{BIPSGreen}{#1}}
+\newcommand{\gray}[1]{\textcolor{BIPSTextGray}{#1}}
+
 %%% Redefine the emph command to use BIPS Blue
-\renewcommand{\emph}[1]{\textcolor{BIPSBlue}{#1}}
+\renewcommand{\emph}[1]{\blue{#1}}
 
 %%% Define some new fields
 \newcommand{\bips@contactauthor}{} % the author that gives the presentation
