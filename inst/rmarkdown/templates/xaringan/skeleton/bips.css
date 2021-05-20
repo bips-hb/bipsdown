@@ -34,9 +34,9 @@
   --header-font-family-fallback: Georgia, serif;
   --code-font-family: 'Fira Mono';
   --code-font-is-google: 1;
-  --base-font-size: 20px;
+  --base-font-size: 25px;
   --text-font-size: 1rem;
-  --code-font-size: 0.9rem;
+  --code-font-size: 0.8rem;
   --code-inline-font-size: 1em;
   --header-h1-font-size: 2.75rem;
   --header-h2-font-size: 2.25rem;
@@ -307,11 +307,26 @@ placement with % is problematic
   text-align: center;
 }
 
+.inverse .remark-slide-number {
+  color: var(--inverse-text-color);
+}
+
+/* allow hiding the logo explicitly */
+.nologo {
+  background-image: none;
+}
+
+/* Pull up slide number of the logo is hidden */
+.nologo .remark-slide-number {
+  top: 50px;
+}
+
 /*
 Don't show slide number on inverted slides used for titles and thanks frame
 */
-.inverse .remark-slide-number,
-.thanks .remark-slide-number {
+/*.inverse .remark-slide-number,*/
+.thanks .remark-slide-number,
+.unnumbered .remark-slide-number {
   visibility: hidden;
 }
 
@@ -319,7 +334,8 @@ Don't show slide number on inverted slides used for titles and thanks frame
 Reference theme has a gray line under the titles, which is
 not that easy tu emulate with borders, but I tried
 */
-.remark-slide-content h1 {
+.remark-slide-content h1,
+.remark-slide-content h2 {
   margin-left: 11%;
   margin-right: 11%;
   padding-bottom: 2.5%;
@@ -327,6 +343,7 @@ not that easy tu emulate with borders, but I tried
   border-bottom-style: solid;
   border-bottom-color: #E2E2E2;
 }
+
 
 /* ---------------------------- */
 /*
