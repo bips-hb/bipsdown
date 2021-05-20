@@ -64,6 +64,7 @@ The following additional classes are implemented:
 
 - `nologo`: Hide the BIPS logo usually in the upper right corner
 - `unnumbered`: Hide the slide number usually below the BIPS logo
+- The font size helper classes from [xaringan-metropolis](https://github.com/pat-s/xaringan-metropolis/blob/master/mtheme.css) are also included, use e.g. `.font110[larger text]` for text that's 110% the size of the regular text.
 
 ### Further Reading
 

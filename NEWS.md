@@ -8,6 +8,7 @@
 - Allow hiding the slide number with `class: unnumbered`
 - Allow hiding the logo with `class: nologo` (Note that this sets `background-image: none`, so if you want to show a background image, the logo is hidden anyway)
 - Also add dividing line under `h2` elements (e.g. `## My Level 2 Heading`) as was done for `h1`
+- Add helper classes from [xaringan-metropolis](https://github.com/pat-s/xaringan-metropolis/blob/master/mtheme.css)
 
 # bipsdown 0.1.1
 
