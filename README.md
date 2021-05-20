@@ -34,7 +34,7 @@ Your `.Rmd` will start with something like this:
 title: "A {xaringan} template for BIPS presentations"
 subtitle: "A scientific thing"
 author: "Lukas Burk"
-date: "2021-04-27"
+date: "2021-05-20"
 output:
   xaringan::moon_reader:
     css: [bips.css, default]
@@ -53,6 +53,13 @@ but `{xaringan}` provides an RStudio Addin called “Infinite Moon Reader”
 that renders your slides, displays them in the Viewer Pane, and
 automatically updates them as you edit your slides.  
 This is generally considered to be a nifty thing.
+
+### Theme-Specifics
+
+The following additional classes are implemented:
+
+-   `nologo`: Hide the BIPS logo usually in the upper right corner
+-   `unnumbered`: Hide the slide number usually below the BIPS logo
 
 ### Further Reading
 

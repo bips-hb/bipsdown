@@ -58,6 +58,13 @@ output:
 You can knit & preview your slides as you usually would with RMarkdown, but `{xaringan}` provides an RStudio Addin called "Infinite Moon Reader" that renders your slides, displays them in the Viewer Pane, and automatically updates them as you edit your slides.  
 This is generally considered to be a nifty thing.
 
+### Theme-Specifics
+
+The following additional classes are implemented:
+
+- `nologo`: Hide the BIPS logo usually in the upper right corner
+- `unnumbered`: Hide the slide number usually below the BIPS logo
+
 ### Further Reading
 
 - [{xaringan} in the RMarkdown book](https://bookdown.org/yihui/rmarkdown/xaringan.html)
