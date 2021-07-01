@@ -1,3 +1,8 @@
+# bipsdown 2.1
+
+- Fix missing city on last slide in template Rmd
+- Add `macros.js`, with macros from [here](https://gist.github.com/albertotb/a47025149ed550a3a3c3525b2da37ee2), see [documentation on macros here](https://bookdown.org/yihui/rmarkdown/some-tips.html#macros).
+
 # bipsdown 0.2.0
 
 ## Changes for xaringan theme

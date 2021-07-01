@@ -10,6 +10,7 @@ output:
     css: [bips.css, default]
     lib_dir: libs
     nature:
+      beforeInit: macros.js
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
@@ -31,6 +32,7 @@ knitr::opts_chunk$set(
 )
 
 # xaringanExtra features, see https://pkg.garrickadenbuie.com/xaringanExtra/
+# remotes::install_github("gadenbui/xaringanExtra")
 xaringanExtra::use_xaringan_extra(
   c("tile_view", "panelset", "clipboard", "fit_screen")
 )
@@ -399,7 +401,7 @@ background-image: none
 .bipsblue[`r rmarkdown::metadata$contactauthor`]  
 Leibniz Institute for Prevention Research and Epidemiology - BIPS GmbH  
 Achterstraße 30  
-D-28359  
+D-28359 Bremen  
 .bipsblue[`r rmarkdown::metadata$contactemail`]
 ]]
 .pull-right[
