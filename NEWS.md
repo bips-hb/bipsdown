@@ -1,3 +1,10 @@
+# bipsdown 2.2
+
+## Changes for beamer theme
+
+- Add `allowframebreaks` option to bibliography slide to ensure all references are visible.
+
+
 # bipsdown 2.1
 
 - Fix missing city on last slide in template Rmd

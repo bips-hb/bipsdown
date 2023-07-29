@@ -1,6 +1,6 @@
 Package: bipsdown
 Title: BIPS Themes for Presentations
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: 
     c(person(given = "Lukas",
              family = "Burk",
