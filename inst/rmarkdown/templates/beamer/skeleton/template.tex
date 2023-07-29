@@ -133,10 +133,9 @@ $body$
 
 %%% bib?
 $if(bibliography)$
-\begin{frame}{Bibliography}
-
-\printbibliography[heading=none]
-
+\begin{frame}[allowframebreaks]{}
+  \bibliographytrue
+  \printbibliography[heading=none]
 \end{frame}
 $else$
 $endif$
