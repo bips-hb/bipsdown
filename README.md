@@ -34,7 +34,7 @@ Your `.Rmd` will start with something like this:
 title: "A {xaringan} template for BIPS presentations"
 subtitle: "A scientific thing"
 author: "Lukas Burk"
-date: "2021-05-20"
+date: "2024-02-14"
 output:
   xaringan::moon_reader:
     css: [bips.css, default]
@@ -58,23 +58,23 @@ This is generally considered to be a nifty thing.
 
 The following additional classes are implemented:
 
--   `nologo`: Hide the BIPS logo usually in the upper right corner
--   `unnumbered`: Hide the slide number usually below the BIPS logo
--   The font size helper classes from
-    [xaringan-metropolis](https://github.com/pat-s/xaringan-metropolis/blob/master/mtheme.css)
-    are also included, use e.g. `.font110[larger text]` for text that’s
-    110% the size of the regular text.
+- `nologo`: Hide the BIPS logo usually in the upper right corner
+- `unnumbered`: Hide the slide number usually below the BIPS logo
+- The font size helper classes from
+  [xaringan-metropolis](https://github.com/pat-s/xaringan-metropolis/blob/master/mtheme.css)
+  are also included, use e.g. `.font110[larger text]` for text that’s
+  110% the size of the regular text.
 
 ### Further Reading
 
--   [{xaringan} in the RMarkdown
-    book](https://bookdown.org/yihui/rmarkdown/xaringan.html)
--   [{xaringan} documentation
-    presentation](http://slides.yihui.name/xaringan/)
--   [Bonus features in {xaringanExtra} by Garrick Aden-Buie
-    ({xaringan}-wizard)](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
--   [Garrick’s short intro to
-    {xaringan}](https://slides.garrickadenbuie.com/sliding-in-style/)
+- [{xaringan} in the RMarkdown
+  book](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+- [{xaringan} documentation
+  presentation](http://slides.yihui.name/xaringan/)
+- [Bonus features in {xaringanExtra} by Garrick Aden-Buie
+  ({xaringan}-wizard)](https://pkg.garrickadenbuie.com/xaringanExtra/#/README?id=xaringanextra)
+- [Garrick’s short intro to
+  {xaringan}](https://slides.garrickadenbuie.com/sliding-in-style/)
 
 ## Beamer Slides (PDF)
 
@@ -83,13 +83,13 @@ You can find a demo presentation
 
 ## Credits & License
 
--   The `{xaringan}` theme was mostly created with the help of the
-    wonderful
-    [{xaringanthemer}](https://pkg.garrickadenbuie.com/xaringanthemer/)
-    package.
--   The `beamer` theme was [implemented by Louis
-    Dijkstra](https://github.com/bips-hb/bips-beamer) and further
-    adapted with a pandoc template to be used with RMarkdown.
+- The `{xaringan}` theme was mostly created with the help of the
+  wonderful
+  [{xaringanthemer}](https://pkg.garrickadenbuie.com/xaringanthemer/)
+  package.
+- The `beamer` theme was [implemented by Louis
+  Dijkstra](https://github.com/bips-hb/bips-beamer) and further adapted
+  with a pandoc template to be used with RMarkdown.
 
 To quote Louis:
 

@@ -2,6 +2,7 @@
 title: "A {xaringan} template for BIPS presentations"
 subtitle: "A scientific thing" # e.g. the occasion
 author: "Lukas Burk" # For the title slide
+institute: "BIPS"
 contactauthor: "Lukas Burk" # For the last slide
 contactemail: "burk@leibniz-bips.de" # For the last slide
 date: "`r Sys.Date()`" # Automatically evaluates to today
