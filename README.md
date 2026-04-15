@@ -1,6 +1,3 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # `{bipsdown}`: BIPS themes for RMarkdown presentations
 
 The goal of `{bipsdown}` is to provide easy to use RMarkdown templates
@@ -34,7 +31,7 @@ Your `.Rmd` will start with something like this:
 title: "A {xaringan} template for BIPS presentations"
 subtitle: "A scientific thing"
 author: "Lukas Burk"
-date: "2024-02-14"
+date: "2026-04-15"
 output:
   xaringan::moon_reader:
     css: [bips.css, default]
@@ -51,7 +48,7 @@ output:
 You can knit & preview your slides as you usually would with RMarkdown,
 but `{xaringan}` provides an RStudio Addin called “Infinite Moon Reader”
 that renders your slides, displays them in the Viewer Pane, and
-automatically updates them as you edit your slides.  
+automatically updates them as you edit your slides.\
 This is generally considered to be a nifty thing.
 
 ### Theme-Specifics
@@ -101,3 +98,16 @@ To quote Louis:
 > beamer style is too.
 
         This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+## Related
+
+The BIPS presentation theme zoo for "I don't want to use PowerPoint" folks:
+
+| Markup format | Intermediate format | Output format | Based on | Repo / Package | Status |
+|---|---|---|---|---|---|
+| LaTeX | --- | PDF | | [bips-beamer](https://github.com/bips-hb/bips-beamer) | Stable |
+| [RMarkdown](https://rmarkdown.rstudio.com/) | LaTeX | PDF | bips-beamer | [bipsdown](https://github.com/bips-hb/bipsdown) | Stable |
+| [RMarkdown](https://rmarkdown.rstudio.com/) | [xaringan](http://slides.yihui.name/xaringan/) | HTML | | [bipsdown](https://github.com/bips-hb/bipsdown) | Experimental |
+| [Quarto](https://quarto.org/) | LaTeX | PDF | bips-beamer | [bips-quarto](https://github.com/bips-hb/bips-quarto) | Stable |
+| [Quarto](https://quarto.org/) | reveal.js | HTML | | [bips-quarto](https://github.com/bips-hb/bips-quarto) | Experimental |
+| [typst](https://typst.app/) | --- | PDF | | [bips-typst](https://github.com/bips-hb/bips-typst) / [bypst](https://typst.app/universe/package/bypst) | Stable |
