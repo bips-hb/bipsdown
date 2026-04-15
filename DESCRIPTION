@@ -1,23 +1,22 @@
 Package: bipsdown
-Title: BIPS Themes for Presentations
+Title: BIPS Themes for RMarkdown Presentations
 Version: 0.2.2
-Authors@R: 
-    c(person(given = "Lukas",
-             family = "Burk",
-             role = c("aut", "cre"),
-             email = "burk@leibniz-bips.de",
-             comment = c(ORCID = "0000-0001-7528-3795")),
-      person(given = "Louis",
-             family = "Dijkstra",
-             role = "aut",
-             email = "dijkstra@leibniz-bips.de"))
+Authors@R: c(
+    person("Lukas", "Burk", , "burk@leibniz-bips.de", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-7528-3795")),
+    person("Louis", "Dijkstra", , "dijkstra@leibniz-bips.de", role = "aut")
+  )
 Description: Provides RMarkdown templates for presentations with the BIPS
-    style
+    style, wrapping the bips-beamer LaTeX theme and a reveal.js HTML
+    theme.
 License: CC BY 4.0
 Imports: 
     rmarkdown,
-    xaringan,
-    xaringanExtra
+    xaringan
+Suggests: 
+    leaflet,
+    xaringanExtra,
+    DT
 Remotes: 
     gadenbuie/xaringanExtra
 Encoding: UTF-8

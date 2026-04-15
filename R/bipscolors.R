@@ -5,7 +5,7 @@ bips_color_list_hex <- list(
   BIPSGreen = rgb(49, 210, 57, maxColorValue = 255)
 )
 
-bips_color_list_rgb <- lapply(bips_color_list, \(x) as.vector(col2rgb(x)))
+bips_color_list_rgb <- lapply(bips_color_list_hex, \(x) as.vector(col2rgb(x)))
 
 
 # $BIPSBlue: "#1763AA"
