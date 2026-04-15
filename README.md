@@ -1,11 +1,5 @@
 # `{bipsdown}`: BIPS themes for RMarkdown presentations
 
-> [!TIP]
-> This package provides presentation templates for RMarkdown.
-> The original LaTeX template is available at [bips-hb/bips-beamer](https://github.com/bips-hb/bips-beamer).
-> A [quarto](https://quarto.org/) extension is available at [bips-hb/bips-quarto](https://github.com/bips-hb/bips-quarto), which bundles the beamer theme and an experimental reveal.js theme.
-> A [typst](https://typst.app) wrapper is available as a [typst package](https://typst.app/universe/package/bypst) and from [bips-hb/bips-typst](https://github.com/bips-hb/bips-typst).
-
 The goal of `{bipsdown}` is to provide easy to use RMarkdown output formats consistent with the BIPS house styles. All theme assets (LaTeX .sty, logo, fonts, CSS) are bundled in the package — no files need to be copied to your working directory.
 
 ## Installation
