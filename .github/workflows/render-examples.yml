@@ -29,57 +29,42 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: |
-            local::.
-            any::rmarkdown
-            any::xaringan
-            any::xaringanExtra
+          extra-packages: local::.
+          dependencies: '"all"'
 
-      - name: Install TinyTeX
-        uses: r-lib/actions/setup-tinytex@v2
+      - uses: r-lib/actions/setup-tinytex@v2
 
       - name: Install LaTeX packages
         run: |
           tinytex::tlmgr_install(c(
-            "beamer", "pgf", "tikz-cd", "etoolbox", "xifthen",
-            "textpos", "helvet", "fira", "fontspec", "booktabs",
-            "biblatex", "biber", "mdframed", "fancyvrb"
+            "beamer", "pgf", "etoolbox", "xifthen", "textpos",
+            "helvet", "fira", "fontspec", "booktabs", "amsmath",
+            "fancyvrb", "framed", "tikzfill"
           ))
         shell: Rscript {0}
 
       - name: Render beamer example
         run: |
           dir.create("_site/bips-beamer", recursive = TRUE)
-          # Copy skeleton files to temp dir and render there
-          skeleton <- "inst/rmarkdown/templates/beamer/skeleton"
-          tmp <- tempdir()
-          file.copy(list.files(skeleton, full.names = TRUE), tmp, recursive = TRUE)
           rmarkdown::render(
-            file.path(tmp, "skeleton.Rmd"),
+            "inst/rmarkdown/templates/beamer/skeleton/skeleton.Rmd",
             output_file = "bips-beamer.pdf",
-            output_dir = "_site/bips-beamer"
+            output_dir = normalizePath("_site/bips-beamer")
           )
         shell: Rscript {0}
 
       - name: Render xaringan example
         run: |
           dir.create("_site/bips-xaringan", recursive = TRUE)
-          skeleton <- "inst/rmarkdown/templates/xaringan/skeleton"
-          tmp <- file.path(tempdir(), "xaringan")
-          dir.create(tmp)
-          file.copy(list.files(skeleton, full.names = TRUE), tmp, recursive = TRUE)
-          # Also copy resources
-          resources <- "inst/rmarkdown/templates/xaringan/resources"
-          file.copy(list.files(resources, full.names = TRUE), tmp)
           rmarkdown::render(
-            file.path(tmp, "skeleton.Rmd"),
+            "inst/rmarkdown/templates/xaringan/skeleton/skeleton.Rmd",
             output_file = "index.html",
-            output_dir = "_site/bips-xaringan"
+            output_dir = normalizePath("_site/bips-xaringan")
           )
-          # Copy libs for self-contained xaringan
-          libs_dir <- file.path(tmp, "libs")
-          if (dir.exists(libs_dir)) {
-            file.copy(libs_dir, "_site/bips-xaringan", recursive = TRUE)
+          # Copy xaringan libs if not self-contained
+          libs <- "inst/rmarkdown/templates/xaringan/skeleton/libs"
+          if (dir.exists(libs)) {
+            file.copy(libs, "_site/bips-xaringan", recursive = TRUE)
           }
         shell: Rscript {0}
 
