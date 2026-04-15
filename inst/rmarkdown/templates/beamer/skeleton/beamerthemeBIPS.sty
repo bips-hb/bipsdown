@@ -1,8 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The BIPS beamer theme
+% The BIPS beamer theme 
 %
 % A beamer theme that tries to mimic the Powerpoint
-% BIPS presentation standard as much as possible.
+% BIPS presentation standard as much as possible. 
 %
 % Author: Louis Dijkstra
 % E-mail: dijkstra@leibniz-bips.de
@@ -34,7 +34,7 @@
 }
 
 \iftoggle{useFira}{
-	%\RequirePackage{fontspec}
+	\RequirePackage{fontspec}
 	\setsansfont[BoldFont={Fira Sans}]{Fira Sans Light}
 	\setmonofont{Fira Mono}
 }{
@@ -43,12 +43,12 @@
 
 
 %%% Define the colors
-\definecolor{BIPSBlue}{RGB}{23, 99, 170}
+\definecolor{BIPSBlue}{RGB}{23, 99, 170} 
 \definecolor{BIPSTextGray}{RGB}{66, 66, 66}
 \definecolor{BIPSOrange}{RGB}{250, 133, 55}
 \definecolor{BIPSGreen}{RGB}{49, 210, 57}
 
-%%% Create short commands for the different colors
+%%% Create short commands for the different colors 
 \newcommand{\blue}[1]{\textcolor{BIPSBlue}{#1}}
 \newcommand{\orange}[1]{\textcolor{BIPSOrange}{#1}}
 \newcommand{\green}[1]{\textcolor{BIPSGreen}{#1}}
@@ -57,7 +57,7 @@
 %%% Redefine the emph command to use BIPS Blue
 \renewcommand{\emph}[1]{\blue{#1}}
 
-%%% Define some new fields
+%%% Define some new fields 
 \newcommand{\bips@contactauthor}{} % the author that gives the presentation
 \newcommand{\bips@occasion}{}  % the conference/meeting the presentation is given
 \newcommand{\bips@email}{}
@@ -66,7 +66,7 @@
 \newcommand{\occasion}[1]{\renewcommand{\bips@occasion}{#1}}
 \newcommand{\email}[1]{\renewcommand{\bips@email}{#1}}
 
-%%% Itemize
+%%% Itemize 
 \setbeamertemplate{itemize items}[circle]
 
 %%% Set the general fonts (colors come later)
@@ -78,7 +78,7 @@
 \setbeamerfont{author}{size=\small}
 \setbeamerfont{date}{size=\small}
 
-%%% Set the colors
+%%% Set the colors 
 \setbeamercolor{normal text}{fg=BIPSTextGray}
 \setbeamercolor{item}{fg=BIPSTextGray}
 \setbeamercolor{section in toc}{fg=BIPSTextGray}
@@ -100,45 +100,58 @@
 %%% Turn of the navigation symbols
 \setbeamertemplate{navigation symbols}{}
 
+%%% Set text margins
+\setbeamersize{text margin left=1cm, text margin right=1cm}
+
 %%% Title Page
+%%% Uses remember picture + overlay to position relative to the actual page
+%%% center, avoiding beamer's text margin offset.
+%%% When no subtitle is set, the title shifts down for better visual balance.
 \setbeamertemplate{title page}{
 	\usebeamercolor{title page}
-	\begin{tikzpicture}
-		\useasboundingbox (1,0) rectangle (\the\paperwidth,\the\paperheight);
-		\node[font=\usebeamerfont{title}, color=BIPSBlue, text width=12cm, align=center] at (\paperwidth*.5,7) {\inserttitle} ;
-		\node[align=center, font=\usebeamerfont{subtitle}, color=BIPSBlue] at (\paperwidth*.5, 6) {\insertsubtitle};
-		\node[align=center, font=\usebeamerfont{author}, color=BIPSBlue] at (\paperwidth*.5, 4) {\insertauthor};
-		\node[align=center, font=\usebeamerfont{institute}, color=BIPSTextGray] at (\paperwidth*.5, 3.5) {\insertinstitute};
-		\node[align=center, font=\usebeamerfont{date}, color=BIPSTextGray] at (\paperwidth*.5, 2) {\insertdate};
-		\node[align=center, font=\usebeamerfont{date}, color=BIPSTextGray] at (\paperwidth*.5, 1.5) {\bips@occasion};
+	\begin{tikzpicture}[remember picture, overlay]
+		\ifx\insertsubtitle\empty
+			\node[font=\usebeamerfont{title}, color=BIPSBlue, text width=\the\dimexpr\paperwidth-2cm\relax, align=center] at ([yshift=.18\paperheight]current page.center) {\inserttitle};
+		\else
+			\node[font=\usebeamerfont{title}, color=BIPSBlue, text width=\the\dimexpr\paperwidth-2cm\relax, align=center] at ([yshift=.23\paperheight]current page.center) {\inserttitle};
+			\node[align=center, font=\usebeamerfont{subtitle}, color=BIPSBlue] at ([yshift=.13\paperheight]current page.center) {\insertsubtitle};
+		\fi
+		\node[align=center, font=\usebeamerfont{author}, color=BIPSBlue] at ([yshift=-.08\paperheight]current page.center) {\insertauthor};
+		\node[align=center, font=\usebeamerfont{institute}, color=BIPSTextGray] at ([yshift=-.135\paperheight]current page.center) {\insertinstitute};
+		\node[align=center, font=\usebeamerfont{date}, color=BIPSTextGray] at ([yshift=-.29\paperheight]current page.center) {\insertdate};
+		\node[align=center, font=\usebeamerfont{date}, color=BIPSTextGray] at ([yshift=-.34\paperheight]current page.center) {\bips@occasion};
 	\end{tikzpicture}
 }
+
+%%% Helper length for the separator line
+\newlength{\bips@lineend}
 
 %%% Template for the frametitle
 \setbeamertemplate{frametitle}{
 	\vspace*{.5cm}%
-	\begin{beamercolorbox}[wd=12cm, center]{frametitle}
+	\begin{beamercolorbox}[wd=\textwidth, center]{frametitle}
 		\usebeamerfont{frametitle}\insertframetitle
 	\end{beamercolorbox}
 	\vspace*{-.2cm}%
-	\begin{beamercolorbox}[wd=12cm, center]{framesubtitle}
+	\begin{beamercolorbox}[wd=\textwidth, center]{framesubtitle}
 		\usebeamerfont{framesubtitle}\insertframesubtitle
 	\end{beamercolorbox}
-	% add the line
+	% add the line (stop before the logo area on the right)
+	\setlength{\bips@lineend}{\dimexpr\textwidth-3cm\relax}%
 	\begin{tikzpicture}
-		\draw[BIPSTextGray,path fading=east] (-1,1.2) -- (8.5,1.2);
+		\draw[BIPSTextGray,path fading=east] (0,1.2) -- (\bips@lineend,1.2);
 	\end{tikzpicture}
 }
 
-%%% The Background -- also contains the logo
+%%% The Background -- also contains the logo 
 \setbeamertemplate{background}{
 	\begin{tikzpicture}
  		\useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
  			\node[anchor=north east,yshift=-.5cm,xshift=-.5cm]%
         			at (current page.north east)
-        			{\includegraphics[width=0.12\textwidth]{bips-logo.png}};
+        			{\includegraphics[width=1.4cm]{bips-logo.png}};
 			\ifnum\thepage>1\relax %%% If not the title page
-				\node[anchor=north east,yshift=-2cm,xshift=-1cm]%
+				\node[anchor=north,yshift=-2.1cm,xshift=-1.25cm]%
         			at (current page.north east)
         			{\small \insertframenumber};
 			\fi
@@ -170,13 +183,13 @@
 	\setbeamertemplate{background}{
 		\begin{tikzpicture}
 			\useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-			\node[align=center, color=BIPSBlue] at (\paperwidth*.5, 7) {\Large \textbf{#1}};
-			\node[align=center, color=BIPSBlue] at (\paperwidth*.5, 5) {
+			\node[align=center, color=BIPSBlue] at (\paperwidth*.5, \paperheight*.73) {\Large \textbf{#1}};
+			\node[align=center, color=BIPSBlue] at (\paperwidth*.5, \paperheight*.52) {
 				\iftoggle{useGerman}
 					{\small www.leibniz-bips.de}
 					{\small www.leibniz-bips.de/en}
 			};
-			\node[align=right, color=BIPSTextGray] at (4, 2) {
+			\node[align=right, color=BIPSTextGray] at (\paperwidth*.33, \paperheight*.22) {
 					\iftoggle{useGerman}
 						{\small \textbf{Kontakt}\\[5pt]}
 						{\small \textbf{Contact}\\[5pt]}
@@ -190,7 +203,7 @@
 					\small D-28359 Bremen\\[5pt]
 					\small \textcolor{BIPSBlue}{\bips@email}
 			};
-			\node at (10, 2) {\includegraphics[width=0.3\textwidth]{bips-logo.png}};
+			\node at (\paperwidth*.78, \paperheight*.22) {\includegraphics[width=3.5cm]{bips-logo.png}};
 		\end{tikzpicture}
 	}
 	\begin{frame}[c]
