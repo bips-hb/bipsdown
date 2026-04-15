@@ -35,8 +35,16 @@
 
 \iftoggle{useFira}{
 	\RequirePackage{fontspec}
-	\setsansfont[BoldFont={Fira Sans}]{Fira Sans Light}
-	\setmonofont{Fira Mono}
+	% Use file-based loading so fonts are found via TEXINPUTS (set by bips_beamer())
+	% without requiring system-wide font installation.
+	\setsansfont[
+		BoldFont={[FiraSans-Bold.otf]},
+		ItalicFont={[FiraSans-Italic.otf]},
+		BoldItalicFont={[FiraSans-BoldItalic.otf]}
+	]{[FiraSans-Light.otf]}
+	\setmonofont[
+		BoldFont={[FiraMono-Bold.otf]}
+	]{[FiraMono-Regular.otf]}
 }{
 
 }
