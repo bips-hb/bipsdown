@@ -61,11 +61,6 @@ jobs:
             output_file = "index.html",
             output_dir = normalizePath("_site/bips-xaringan")
           )
-          # Copy xaringan libs if not self-contained
-          libs <- "inst/rmarkdown/templates/xaringan/skeleton/libs"
-          if (dir.exists(libs)) {
-            file.copy(libs, "_site/bips-xaringan", recursive = TRUE)
-          }
         shell: Rscript {0}
 
       - name: Create index page
