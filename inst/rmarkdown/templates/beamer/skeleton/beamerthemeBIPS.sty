@@ -35,16 +35,18 @@
 
 \iftoggle{useFira}{
 	\RequirePackage{fontspec}
-	% Use file-based loading so fonts are found via TEXINPUTS (set by bips_beamer())
-	% without requiring system-wide font installation.
+	% Extension key forces file-based lookup via kpathsea/TEXINPUTS,
+	% so fonts work without system-wide installation (e.g. on CI).
 	\setsansfont[
-		BoldFont={[FiraSans-Bold.otf]},
-		ItalicFont={[FiraSans-Italic.otf]},
-		BoldItalicFont={[FiraSans-BoldItalic.otf]}
-	]{[FiraSans-Light.otf]}
+		Extension = .otf,
+		BoldFont = FiraSans-Bold,
+		ItalicFont = FiraSans-Italic,
+		BoldItalicFont = FiraSans-BoldItalic
+	]{FiraSans-Light}
 	\setmonofont[
-		BoldFont={[FiraMono-Bold.otf]}
-	]{[FiraMono-Regular.otf]}
+		Extension = .otf,
+		BoldFont = FiraMono-Bold
+	]{FiraMono-Regular}
 }{
 
 }

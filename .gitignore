@@ -13,6 +13,8 @@ inst/rmarkdown/templates/beamer/skeleton/skeleton.tex
 inst/rmarkdown/templates/beamer/skeleton/*.pdf
 
 fiddle.R
+debug/
+skeleton.knit.md
 
 # Created by https://www.toptal.com/developers/gitignore/api/latex
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex
@@ -245,4 +247,3 @@ TSWLatexianTemp*
 *.vtc
 *.glstex
 # End of https://www.toptal.com/developers/gitignore/api/latex
-debug/
