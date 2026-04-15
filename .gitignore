@@ -245,3 +245,4 @@ TSWLatexianTemp*
 *.vtc
 *.glstex
 # End of https://www.toptal.com/developers/gitignore/api/latex
+debug/

@@ -1,21 +1,12 @@
 ---
 title: "A {xaringan} template for BIPS presentations"
-subtitle: "A scientific thing" # e.g. the occasion
-author: "Lukas Burk" # For the title slide
-contactauthor: "Lukas Burk" # For the last slide
-contactemail: "burk@leibniz-bips.de" # For the last slide
-date: "`r Sys.Date()`" # Automatically evaluates to today
+subtitle: "A scientific thing"
+author: "Author Name"
+contactauthor: "Author Name"
+contactemail: "username@leibniz-bips.de"
+date: "`r Sys.Date()`"
 output:
-  xaringan::moon_reader:
-    css: [bips.css, default]
-    lib_dir: libs
-    nature:
-      beforeInit: macros.js
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-      slideNumberFormat: "%current%" # Only show current slide number
-      ratio: "16:9" # Use "4:3" for old projectors etc.
+  bipsdown::bips_xaringan: default
 ---
 
 ```{r setup, include=FALSE}

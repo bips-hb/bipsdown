@@ -1,4 +1,5 @@
-name: BIPS beamer Presentation template
+name: BIPS Beamer Presentation
 description: >
-   Standard LaTeX/beamer BIPS template for PDF presentations
+   BIPS-styled PDF presentation via LaTeX beamer.
+   Use output format bipsdown::bips_beamer for self-contained usage.
 create_dir: FALSE
