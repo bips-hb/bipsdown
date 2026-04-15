@@ -1,4 +1,5 @@
-name: BIPS xaringan Presentation template
+name: BIPS xaringan Presentation (experimental)
 description: >
-   Standard xaringan BIPS template for HTML presentations
+   BIPS-styled HTML presentation via xaringan.
+   Use output format bipsdown::bips_xaringan for self-contained usage.
 create_dir: FALSE

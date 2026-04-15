@@ -1,6 +1,6 @@
 Package: bipsdown
 Title: BIPS Themes for RMarkdown Presentations
-Version: 0.2.2
+Version: 0.3.0
 Authors@R: c(
     person("Lukas", "Burk", , "burk@leibniz-bips.de", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7528-3795")),
@@ -13,13 +13,13 @@ License: CC BY 4.0
 Imports: 
     rmarkdown,
     xaringan
-Suggests: 
+Suggests:
+    DT,
+    ggplot2,
     leaflet,
-    xaringanExtra,
-    DT
-Remotes: 
-    gadenbuie/xaringanExtra
+    ragg,
+    xaringanExtra
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.3.3

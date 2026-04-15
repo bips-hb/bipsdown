@@ -1,51 +1,33 @@
 ---
-title: "A BIPS Theme for Beamer Slides"
-subtitle: "The power of \\LaTeX\\ combined with RMarkdown"
-author: 
-  - Louis Dijkstra
-  - Lukas Burk
-contactauthor: Lukas Burk
+title: "Presentation Title"
+subtitle: "Subtitle"
+author:
+  - Author Name
+contactauthor: Author Name
 date: "`r Sys.Date()`"
-occasion: "Project Meeting"
-email: you@leibniz-bips.de
-themeoptions: 
-  - fira
-  # - german
-thankstext: Thank you for your attention
-output: 
-  beamer_presentation: 
-    incremental: yes
-    latex_engine: "xelatex"
-    template: template.tex
-    dev: cairo_pdf
-    citation_package: biblatex
-    keep_tex: true
-# bibliography: references.bib
+occasion: "Conference Name"
+email: username@leibniz-bips.de
+output:
+  bipsdown::bips_beamer:
+    keep_tex: false
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo = FALSE, 
-  message = FALSE,
-  fig.height = 4.2,
-  fig.width = 7,
-  out.width = "95%"
-)
-```
 
 ## Introduction
 
-- This is a very interesting talk
-
-## Background
+- This is a BIPS beamer presentation
+- Written in RMarkdown
+- No need to copy any template files
 
 ## Methods
 
+- The `bips_beamer()` format bundles all assets
+- Uses Fira fonts and 16:9 by default
+- Pass `themeoptions`, `aspectratio`, etc. to customize
+
 ## Results
 
-## Limiations
-
-## Outlook
+- Point one
+- Point two
 
 ## Conclusion
 
