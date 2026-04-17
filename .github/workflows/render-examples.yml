@@ -66,21 +66,74 @@ jobs:
       - name: Create index page
         run: |
           touch _site/.nojekyll
-          cat > _site/index.html << 'EOF'
+          cp inst/rmarkdown/templates/beamer/skeleton/bips-logo.png _site/
+          cat > _site/index.html << 'GALLERY_EOF'
           <!DOCTYPE html>
-          <html>
-          <head><title>bipsdown examples</title></head>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>bipsdown — Template Gallery</title>
+            <style>
+              :root { --bips-blue: #1763AA; --bips-orange: #F98437; --bips-text: #424242; }
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body { font-family: system-ui, -apple-system, sans-serif; color: var(--bips-text); max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+              header { text-align: center; margin-bottom: 2.5rem; }
+              header img { height: 64px; margin-bottom: 1rem; }
+              h1 { color: var(--bips-blue); font-size: 1.75rem; margin-bottom: 0.25rem; }
+              .subtitle { color: #666; font-size: 1rem; }
+              .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 1.5rem; }
+              .card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+              .card iframe { width: 100%; height: 340px; border: none; background: #f5f5f5; }
+              .card-body { padding: 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+              .card-body h2 { font-size: 1.1rem; color: var(--bips-blue); }
+              .card-body p { font-size: 0.85rem; color: #666; }
+              .badge { font-size: 0.7rem; padding: 0.2em 0.6em; border-radius: 4px; white-space: nowrap; font-weight: 600; }
+              .badge-html { background: #e8f4fd; color: var(--bips-blue); }
+              .badge-pdf { background: #fff3e6; color: #c56a00; }
+              a.btn { display: inline-block; padding: 0.4rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; background: var(--bips-blue); color: #fff; }
+              a.btn:hover { opacity: 0.9; }
+              footer { margin-top: 2.5rem; text-align: center; font-size: 0.8rem; color: #999; }
+              footer a { color: var(--bips-blue); }
+            </style>
+          </head>
           <body>
-          <h1>bipsdown example presentations</h1>
-          <ul>
-            <li><a href="bips-beamer/bips-beamer.pdf">Beamer (PDF)</a></li>
-            <li><a href="bips-xaringan/">xaringan (HTML)</a></li>
-          </ul>
+            <header>
+              <img src="bips-logo.png" alt="BIPS Logo">
+              <h1>bipsdown</h1>
+              <p class="subtitle">Template gallery for <code>bips_beamer</code> and <code>bips_xaringan</code> RMarkdown formats</p>
+            </header>
+            <div class="grid">
+              <div class="card">
+                <iframe src="bips-xaringan/" loading="lazy" title="xaringan preview"></iframe>
+                <div class="card-body">
+                  <div>
+                    <h2>xaringan <span class="badge badge-html">HTML</span></h2>
+                    <p>Interactive HTML slides via remark.js</p>
+                  </div>
+                  <a class="btn" href="bips-xaringan/">Open</a>
+                </div>
+              </div>
+              <div class="card">
+                <iframe src="bips-beamer/bips-beamer.pdf" loading="lazy" title="Beamer preview"></iframe>
+                <div class="card-body">
+                  <div>
+                    <h2>Beamer <span class="badge badge-pdf">PDF</span></h2>
+                    <p>LaTeX PDF slides via XeLaTeX</p>
+                  </div>
+                  <a class="btn" href="bips-beamer/bips-beamer.pdf">Open</a>
+                </div>
+              </div>
+            </div>
+            <footer>
+              Install: <code>remotes::install_github("bips-hb/bipsdown")</code>
+              &middot; <a href="https://github.com/bips-hb/bipsdown">Source on GitHub</a>
+            </footer>
           </body>
           </html>
-          EOF
+          GALLERY_EOF
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
@@ -92,4 +145,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
